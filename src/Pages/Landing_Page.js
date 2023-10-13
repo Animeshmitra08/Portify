@@ -28,8 +28,26 @@ const Landing_Page = () => {
           </div>
         </section>
         <section className="relative w-full max-w-container bg-[rgb(238,247,248)]">
-          <div className="container mx-auto max-h-fit px-4 sm:mt-20 sm:px-6 lg:px-8 xl:mt-32">
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laboriosam reiciendis. A est quas voluptatum, officiis nam commodi ipsa modi voluptate at harum deleniti doloribus aspernatur animi. Deleniti libero voluptatem quos ab tenetur aut optio mollitia facere aliquam sit similique at laboriosam quas excepturi, illum aperiam? Nemo labore modi dicta.
+          <div className="container flex flex-col items-center text-center mx-auto max-h-fit px-4 sm:mt-28 sm:px-6 lg:px-8 xl:mt-32">
+
+           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+            Our Mission
+           </h1>
+           <p className="mt-6 sm:text-lg">
+            Our mission is to empower creatives and professionals by providing them with the perfect platform to display their talents and achievements. We believe that your portfolio should be a work of art in itself, a digital canvas that reflects your passion and personality.
+           </p>
+          </div>
+
+          <div className="container flex flex-col mx-auto px-4 mt-10 sm:mt-20 sm:px-6 lg:px-8 xl:mt-32">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-center">Our Services</h1>
+            <ul className="list-disc px-10 md:px-28 mt-10 sm:text-lg">
+              <li>Portfolio Website Design and Development</li>
+              <li>Customized Templates</li>
+              <li>Graphic Design Services</li>
+              <li>SEO Optimization for Enhanced Visibility</li>
+              <li>Blog Integration for Showcasing Your Insights</li>
+              <li>Ongoing Support and Maintenance</li>
+            </ul>
           </div>
           <div className="container mx-auto px-4 sm:mt-20 sm:px-6 lg:px-8 xl:mt-32">
            We have differnt types of Template
