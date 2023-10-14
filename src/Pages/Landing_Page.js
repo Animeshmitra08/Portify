@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { scroll } from "framer-motion";
+import Cards from '../Components/Cards';
 
 const Landing_Page = () => {
   return (
     <>
       <motion.main className="relative mx-auto -mt-[5.75rem] overflow-hidden pb-16 pt-[5.75rem]">
-        <img src="./assets/v904-nunny-012.jpg" className="absolute h-screen -top-[1rem] -ml-[120rem] max-w-none w-[166rem] -z-10 sm:-ml-[100.5rem] left-1/2"/>
+        <img src="./assets/v904-nunny-012.jpg" className="absolute h-screen -top-[1rem] -ml-[120rem] max-w-none w-[200rem] -z-10 sm:-ml-[100.5rem] left-1/2"/>
         <section className="relative w-full max-w-container px-4 sm:px-6 lg:px-8 h-[35rem] sm:h-[28em] mt-[10rem] flex flex-col items-center">
           <motion.h1 
           initial = {{y:50, opacity:0}}
@@ -27,7 +28,9 @@ const Landing_Page = () => {
             </motion.button>
           </div>
         </section>
-        <section className="relative w-full max-w-container bg-[rgb(238,247,248)]">
+
+
+        <section className="relative w-full max-w-container ">
           <div className="container flex flex-col items-center text-center mx-auto max-h-fit px-4 sm:mt-28 sm:px-6 lg:px-8 xl:mt-32">
 
            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
@@ -38,8 +41,9 @@ const Landing_Page = () => {
            </p>
           </div>
 
-          <div className="container flex flex-col mx-auto px-4 mt-10 sm:mt-20 sm:px-6 lg:px-8 xl:mt-32">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-center">Our Services</h1>
+          <div className="relative container flex flex-col mx-auto px-4 mt-20 sm:mt-20 sm:px-6 lg:px-8 xl:mt-28 py-3">
+            {/* <img src="./assets/v904-nunny-012.jpg" className="absolute h-screen -top-[1rem] -ml-[120rem] max-w-none w-[200rem] -z-10 sm:-ml-[100.5rem] left-1/2 mix-blend-multiply"/> */}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-center md:text-left">Our Services</h1>
             <ul className="list-disc px-10 md:px-28 mt-10 sm:text-lg">
               <li>Portfolio Website Design and Development</li>
               <li>Customized Templates</li>
@@ -49,8 +53,26 @@ const Landing_Page = () => {
               <li>Ongoing Support and Maintenance</li>
             </ul>
           </div>
-          <div className="container mx-auto px-4 sm:mt-20 sm:px-6 lg:px-8 xl:mt-32">
-           We have differnt types of Template
+
+
+          <div className="container mx-auto px-4 sm:mt-20 sm:px-6 lg:px-8">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-center md:text-right">
+              What Sets Us Apart
+            </h1>
+            <div className="mt-6">
+              <Cards title="Design Prowess"/>
+
+            </div>
+           
+           
+
+            Design Prowess: We're not just developers; we're designers at heart. Our team of talented designers knows how to create visually captivating websites that will leave a lasting impression on your visitors.
+
+            Tailored Solutions: Your portfolio is as unique as you are. We work closely with you to understand your vision and requirements, ensuring that your website is a true reflection of your brand and style.
+
+            User-Centric Approach: Your audience is at the forefront of our design. We create user-friendly, intuitive websites that engage and inspire, allowing your work to take center stage.
+
+            Cutting-Edge Technology: We stay at the forefront of web development trends and technologies, ensuring that your portfolio is not only beautiful but also fully functional, responsive, and compatible across all devices.
           </div>
         </section>
       </motion.main>

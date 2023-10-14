@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Landing_Page/>}/>
+        <Route path="/" exact element={<Landing_Page/>}/>
       </Routes>
       <Footer/>
     </>
