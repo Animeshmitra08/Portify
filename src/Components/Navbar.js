@@ -41,13 +41,17 @@ export default function Navbar() {
             Features
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Marketplace
+            Templates
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Company
           </a>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-1">
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            Register
+          </a>
+          <span>/</span>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
@@ -94,7 +98,7 @@ export default function Navbar() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Marketplace
+                  Templates
                 </a>
                 <a
                   href="#"
@@ -104,6 +108,12 @@ export default function Navbar() {
                 </a>
               </div>
               <div className="py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Register
+                </a>
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
