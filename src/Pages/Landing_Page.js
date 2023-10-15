@@ -12,7 +12,7 @@ const Landing_Page = () => {
 
   return (
     <>
-      <motion.main className="relative mx-auto -mt-[5.75rem] overflow-hidden pb-16 pt-[5.75rem]">
+      <motion.main className="relative mx-auto -mt-[6.50rem] overflow-hidden pb-16 pt-[5.75rem]">
         <img src="./assets/v904-nunny-012.jpg" className="absolute h-screen -top-[1rem] -ml-[120rem] max-w-none w-[200rem] -z-10 sm:-ml-[100.5rem] left-1/2"/>
         <section className="relative w-full max-w-container px-4 sm:px-6 lg:px-8 h-[35rem] sm:h-[28em] mt-[10rem] flex flex-col items-center">
           <motion.h1 
