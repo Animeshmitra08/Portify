@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 
 const Aboutus = () => {
   return (
     <>
+      <Navbar/>
       <div>Let's Collaborate
         <p>
           We're passionate about helping you succeed. Your portfolio is your digital identity, and we're committed to making it unforgettable. Whether you're an artist, photographer, designer, or a professional showcasing your work, we're here to bring your portfolio to life.
@@ -10,6 +13,7 @@ const Aboutus = () => {
           Thank you for considering us as your portfolio website partner. We look forward to helping you share your story with the world.
         </p>
       </div>
+      <Footer/>
     </>
   )
 }
