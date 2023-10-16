@@ -1,15 +1,9 @@
-import { useState } from 'react'
-import { Dialog, Popover } from '@headlessui/react'
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import { Dialog, Popover } from '@headlessui/react';
+import { Link } from 'react-router-dom';
+
+import { FaBars } from 'react-icons/fa';
+import { RxCross2 } from 'react-icons/rx';
 
 
 export default function Navbar() {
@@ -31,7 +25,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <FaBars className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
@@ -50,13 +44,13 @@ export default function Navbar() {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-1">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/register" className="text-sm font-semibold leading-6 text-gray-900">
             Register
-          </a>
+          </Link>
           <span>/</span>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/login" className="text-sm font-semibold leading-6 text-gray-900">
             Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -77,13 +71,12 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <RxCross2 className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                
+              <div className="space-y-2 py-6">                
                 <Link
                   to="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
