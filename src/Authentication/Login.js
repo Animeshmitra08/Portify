@@ -18,7 +18,7 @@ const Login = () => {
                 <div className="flex justify-evenly h-[5rem] text-center gap-2 items-center">
 
                   <motion.button 
-                  whileHover={{background: "blue"}}
+                  whileHover={{background: "skyblue"}}
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   className="border-2 p-2 w-full rounded-xl flex items-center justify-evenly"
@@ -28,7 +28,7 @@ const Login = () => {
                   </motion.button>
 
                   <motion.button className="border-2 p-2 w-full rounded-xl flex items-center justify-evenly"
-                  
+                  whileHover={{background: "grey"}}
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
@@ -82,6 +82,13 @@ const Login = () => {
                       Sign in
                     </button>
                   </div>
+                  
+                  <div className="text-sm mt-2">
+                        Don't have an account?
+                        <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500 ml-2">
+                          Register Here
+                        </a>
+                      </div>
 
 
                 </form>

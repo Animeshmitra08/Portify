@@ -7,6 +7,7 @@ import Aboutus from './Pages/Aboutus';
 import Templates from './Pages/Templates';
 import Login from './Authentication/Login';
 import Register from './Authentication/Register';
+import Dashboard from './Pages/Dashboard';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" exact element={<Landing_Page/>}/>
         <Route path="/about" exact element={<Aboutus/>}/>
         <Route path="/templates" exact element={<Templates/>}/>
+        <Route path="/dashboard" exact element={<Dashboard/>}/>
 
         <Route path="/login" exact element={<Login/>}/>
         <Route path="/register" exact element={<Register/>}/>
