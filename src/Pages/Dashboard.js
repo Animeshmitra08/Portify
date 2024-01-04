@@ -1,12 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { HiMiniBars3BottomLeft } from "react-icons/hi2";
-import { MdSettings } from "react-icons/md";
+import { HiBookOpen, HiMiniBars3BottomLeft, HiUser } from "react-icons/hi2";
+import { MdHomeFilled, MdSettings } from "react-icons/md";
 import SettingsC from '../Components/SettingsC';
 
 const Dashboard = () => {
 
+
+  const items = [
+    {
+      link : "/",
+      icon: <MdHomeFilled/>
+    }
+  ]
+
   const [avatarDropdown, setAvatarDropdown] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
   
   //for avatar----------
   const handleclick = () =>{
@@ -15,6 +24,11 @@ const Dashboard = () => {
   //for settings-----------------
   const settingsClick =()=>{
     setSettingsOpen(!settingsOpen);
+  }
+
+  //for sidebar-------------------
+  const sidebarClick =()=>{
+    setSidebar(!sidebar);
   }
   
   let divref = useRef();                                //to refer the elements of profile avatar                    
@@ -50,7 +64,7 @@ const Dashboard = () => {
       <div className="bg-slate-800 w-100 h-screen overflow-hidden">
         <h1 className="absolute text-gray-50 left-12 top-1 text-lg">Dashboard</h1>
 
-        <button className="absolute left-1 top-1" >
+        <button className="absolute left-1 top-1" onClick={sidebarClick}>
           <HiMiniBars3BottomLeft className="w-8 h-8 fill-slate-400"/>
         </button>
 
@@ -60,6 +74,23 @@ const Dashboard = () => {
             <MdSettings className="w-8 h-8 fill-slate-400" />
           </button>
           {settingsOpen && <SettingsC/>}
+        </div>
+
+        <div className="text-slate-400 absolute text-3xl top-12 w-10">
+          <ul className="flex flex-col gap-4 items-center">
+            <li>
+              <MdHomeFilled/>
+            </li>
+            <li>
+              <HiUser/>
+            </li>
+            <li>
+              <HiBookOpen/>
+            </li>
+          </ul>
+          
+          
+          
         </div>
         
 
@@ -88,12 +119,15 @@ const Dashboard = () => {
 
 
         <div className="bg-slate-50 ml-10 mt-10 w-screen h-screen rounded-tl-md flex pr-2">
-          <div className="w-[300px] h-[100%] bg-slate-300 rounded-l p-1">
-            siidebar
-          </div>
-          <hr/>
-          <div className="w-[100%] h-[100%] bg-slate-500 p-1">
-            content section
+          {sidebar && 
+            <div className="w-[300px] h-[100%] bg-slate-300 rounded-l p-1">
+              siidebar
+            </div>
+          }
+
+
+          <div className="w-[100%] h-[100%] bg-slate-500 p-1 rounded-l">
+            content section       {/*------------outlet----------*/}
           </div>
 
         </div>
