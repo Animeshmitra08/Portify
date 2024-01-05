@@ -3,6 +3,8 @@ import { HiBookOpen, HiMiniBars3BottomLeft, HiUser } from "react-icons/hi2";
 import { MdHomeFilled, MdSettings } from "react-icons/md";
 import SettingsC from '../Components/SettingsC';
 
+import { motion } from 'framer-motion';
+
 const Dashboard = () => {
 
 
@@ -102,7 +104,11 @@ const Dashboard = () => {
           </button>
         
           {avatarDropdown && 
-          <div className="bg-slate-50 w-[150px] rounded-md p-2 absolute shadow-lg right-2 top-[50px] drpdwn border-gray-500 border-[1px]">
+          <motion.div 
+           initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          className="bg-slate-50 w-[150px] rounded-md p-2 absolute shadow-lg right-2 top-[50px] drpdwn border-gray-500 border-[1px]">
             <ul className="flex flex-col gap-1">
               <li>Profile</li>
               <hr/>
@@ -110,7 +116,7 @@ const Dashboard = () => {
               <hr/>
               <li>Logout</li>
             </ul>
-          </div>}
+          </motion.div>}
         </div>
        
         
