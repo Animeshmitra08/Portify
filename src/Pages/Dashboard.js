@@ -4,6 +4,7 @@ import { MdHomeFilled, MdSettings } from "react-icons/md";
 import SettingsC from '../Components/SettingsC';
 
 import { motion } from 'framer-motion';
+import ProfilePop from '../Components/ProfilePop';
 
 const Dashboard = () => {
 
@@ -78,10 +79,10 @@ const Dashboard = () => {
           {settingsOpen && <SettingsC/>}
         </div>
 
-        <div className="text-slate-400 absolute text-3xl top-12 w-10">
+        <div className="text-slate-400 absolute text-3xl top-10 py-2 w-10">
           <ul className="flex flex-col gap-4 items-center">
-            <li>
-              <MdHomeFilled/>
+            <li >
+              <MdHomeFilled/>              
             </li>
             <li>
               <HiUser/>
@@ -90,6 +91,9 @@ const Dashboard = () => {
               <HiBookOpen/>
             </li>
           </ul>
+
+          
+          
           
           
           
@@ -104,19 +108,8 @@ const Dashboard = () => {
           </button>
         
           {avatarDropdown && 
-          <motion.div 
-           initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          className="bg-slate-50 w-[150px] rounded-md p-2 absolute shadow-lg right-2 top-[50px] drpdwn border-gray-500 border-[1px]">
-            <ul className="flex flex-col gap-1">
-              <li>Profile</li>
-              <hr/>
-              <li>Settings</li>
-              <hr/>
-              <li>Logout</li>
-            </ul>
-          </motion.div>}
+          <ProfilePop/>
+          }
         </div>
        
         
@@ -126,9 +119,13 @@ const Dashboard = () => {
 
         <div className="bg-slate-50 ml-10 mt-10 w-screen h-screen rounded-tl-md flex pr-2">
           {sidebar && 
-            <div className="w-[300px] h-[100%] bg-slate-300 rounded-l p-1">
+            <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="w-[300px] h-[100%] bg-slate-300 rounded-l p-1">
               siidebar
-            </div>
+            </motion.div>
           }
 
 
